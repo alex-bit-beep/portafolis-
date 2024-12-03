@@ -1,0 +1,176 @@
+/* Estil general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Afegeixo la imatge de fons */
+    background-image: url("fotos/fondo2.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #004d40; /* Verd fosc */
+    line-height: 25px; 
+}
+
+a {
+    color: white;
+}
+
+header {
+    background-color: #00796b; /* Verd fort */
+    color: white;
+    padding: 30px; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    gap: 16px; 
+
+}
+/* Configuració de la capçalera */
+.intro {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+.noms {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Configuració per a que la llista de damunt quedi alineada (vaig buscar-ho, ja que sinó em quedava estrany) */
+.intro a:hover {
+    text-decoration: underline;
+}
+
+.title {
+    text-align: center;
+    margin: 0;
+    grid-area: 1;
+}
+
+.section {
+    padding: 32px; 
+    background: rgba(255, 255, 255, 0.9);
+    margin: 16px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section1 {
+    padding: 32px; 
+    background: rgba(255, 255, 255, 0.9);
+    margin: 16px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Configuració de la imatge */
+.perfil {
+    max-width: 200px;
+    border-radius: 50%;
+    display: block;
+    margin: 16px auto;
+}
+
+/* Galeria */
+.gallery {
+    display: flex;
+    gap: 16px; 
+    justify-content: center;
+    margin-top: 16px; 
+}
+
+.gallery img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Taula */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px; 
+}
+
+/* Configuració del text i graelles de la taula */
+table th, table td {
+    border: 1px solid #004d40;
+    padding: 8px; 
+    text-align: left;
+}
+
+table th {
+    background-color: #00796b;
+    color: white;
+}
+
+/* Grid per a cada secció */
+.section {
+    display: grid;
+    grid-template-areas: 
+        "text image";
+    grid-template-columns: 2fr 1fr;
+    gap: 16px; 
+}
+
+.section img {
+    grid-area: image;
+    max-width: 100%;
+    align-self: center;
+}
+
+/* Vídeos */
+.video-section {
+    text-align: center;
+    margin-top: 32px; 
+}
+
+.video-section video {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.enllaç1 {
+    color: #00796b; /* Verd fort */
+    border: 2px solid #1b5e20; /* Verd fosc */
+    border-radius: 5px;
+    padding: 8px 16px; 
+    background-color: #a5d6a7; /* Verd suau */
+    color: #1b5e20; /* Verd fosc */
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Format mòbil */
+@media (max-width: 768px) {
+    .section {
+        grid-template-areas: 
+            "text"
+            "image";
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        flex-direction: column;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    .vid {
+        width: 300px; 
+        height: 300px; 
+    }
+
+    .nav-list {
+        flex-direction: column;
+    }
+}

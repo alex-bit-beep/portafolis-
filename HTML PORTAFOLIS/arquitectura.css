@@ -1,0 +1,102 @@
+/* Estil general del cos de la pàgina */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("fotos/fondo2.jpg");background-size: 100%; background-attachment: fixed; background-repeat: no-repeat; 
+    color: #0d47a1; /* Blau fosc */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estil de la capçalera */
+.header{
+    width: 100%;
+    background-color: #1565c0; /* Blau */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 100px;
+}
+
+/* Estil del grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+    padding: 75px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.imatges {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #bbdefb; /* Blau més clar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imatges img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover img {
+    transform: scale(1.1);
+}
+
+/* Estil del peu de pàgina */
+footer {
+    width: 100%;
+    background-color: #0d47a1; /* Blau fosc */
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    margin-top: auto;
+}
+/* Estil per a l'enllaç*/
+.link {
+    margin-top: 1rem;
+    padding: 25px 50px;
+    border: 2px solid #1565c0; /* Blau */
+    border-radius: 5px;
+    background-color: #e3f2fd; /* Blau clar */
+    color: #1565c0; /* Blau */
+    text-decoration: none;
+}
+/* Format mòbil */
+@media(max-width: 768px) {
+ 
+    .header h1 {
+        font-size: 50px;
+    }
+
+ 
+    .grid {
+        grid-template-columns: 1fr; /* Single column layout */
+        padding: 20px;
+    }
+
+    .imatges {
+        padding: 10px;
+    }
+
+
+    footer {
+        padding: 30px 0;
+    }
+
+ 
+    .link {
+        padding: 15px 30px;
+    }
+}
